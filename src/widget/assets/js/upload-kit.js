@@ -165,7 +165,6 @@
                     .append($('<input/>', {"name": name + '[type]', "value": file.type, "type":"hidden"}))
                     .append($('<input/>', {"name": name + '[order]', "value": file.order, "type":"hidden", "data-role": "order"}))
                     .append($('<input/>', {"name": name + '[' + options.baseUrlAttributeName + ']', "value": file[options.baseUrlAttribute], "type":"hidden"}))
-                    .append($('<input/>', {"name": name + '[' + options.urlAttributeName + ']', "value": file[options.urlAttribute], "type":"hidden"}))
                     .append($('<span/>', {
                         "class": "name",
                         "title": file.name,
@@ -190,7 +189,7 @@
 
                 if ((!file.type || file.type.search(/image\/.*/g) !== -1) && options.previewImage) {
                     item.removeClass('not-image').addClass('image');
-                    item.prepend($('<img/>', {src: file[options.urlAttribute]}));
+                    item.prepend($('<img/>', {src: file[options.baseUrlAttribute] + '/' +file[options.pathAttribute]}));
                     item.find('span.type').text('');
                 } else {
                     item.removeClass('image').addClass('not-image');
