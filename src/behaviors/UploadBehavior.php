@@ -49,10 +49,6 @@ class UploadBehavior extends Behavior
     /**
      * @var string
      */
-    public $urlAttribute;
-    /**
-     * @var string
-     */
     public $typeAttribute;
     /**
      * @var string
@@ -141,7 +137,6 @@ class UploadBehavior extends Behavior
         $fields = [
             $this->attributePathName ?: 'path' => $this->pathAttribute,
             $this->attributeBaseUrlName ?: 'base_url' => $this->baseUrlAttribute,
-            'url' => $this->baseUrlAttribute . $this->pathAttribute,
             'type' => $this->typeAttribute,
             'size' => $this->sizeAttribute,
             'name' => $this->nameAttribute,
