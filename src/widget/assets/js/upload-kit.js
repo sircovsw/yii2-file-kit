@@ -97,6 +97,7 @@
                         });
                         methods.handleEmptyValue();
                         methods.checkInputVisibility();
+                        methods.updateOrder();
                         $input.trigger('done');
                         if (options.done !== undefined) options.done(e, data);
                     },
