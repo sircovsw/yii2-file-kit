@@ -158,9 +158,11 @@ class Upload extends InputWidget
                 'editFiledescription' => $this->editFiledescription,
                 'errorHandler' => $this->errorHandler,
                 'pathAttribute' => 'path',
+                'urlAttribute' => 'url',
                 'baseUrlAttribute' => 'base_url',
                 'pathAttributeName' => 'path',
                 'baseUrlAttributeName' => 'base_url',
+                'urlAttributeName' => 'url',
                 'messages' => [
                     'maxNumberOfFiles' => Yii::t($this->messagesCategory, 'Maximum number of files exceeded'),
                     'acceptFileTypes' => Yii::t($this->messagesCategory, 'File type not allowed'),
