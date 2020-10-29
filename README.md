@@ -246,6 +246,7 @@ For multiple files
             'uploadRelation' => 'uploadedFiles',
             'pathAttribute' => 'path',
             'baseUrlAttribute' => 'base_url',
+            'urlAttribute' => 'url',
             'typeAttribute' => 'type',
             'sizeAttribute' => 'size',
             'nameAttribute' => 'name',
@@ -270,6 +271,7 @@ For single file upload
               'attribute' => 'file',
               'pathAttribute' => 'path',
               'baseUrlAttribute' => 'base_url',
+              'urlAttribute' => 'url',
                ...
           ],
       ];
