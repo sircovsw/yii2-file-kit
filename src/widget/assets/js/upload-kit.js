@@ -222,11 +222,11 @@
                 $container.find('.files .upload-kit-item').each(function (index, item) {
                     existingIndexes.push(index);
                 });
-                return existingIndexes.length ? (Math.max.apply(Math, existingIndexes)+1) : 0;
+                return existingIndexes.length ? (Math.max.apply(Math, existingIndexes)+1) : 1;
             },
             updateOrder: function () {
                 $files.find('.upload-kit-item').each(function(index, item){
-                    $(item).find('input[data-role=order]').val(index);
+                    $(item).find('input[data-role=order]').val(parseInt(index) + 1);
                 })
             }
         };
