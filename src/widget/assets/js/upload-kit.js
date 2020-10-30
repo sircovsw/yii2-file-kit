@@ -226,7 +226,7 @@
             },
             updateOrder: function () {
                 $files.find('.upload-kit-item').each(function(index, item){
-                    $(item).find('input[data-role=order]').val(index);
+                    $(item).find('input[data-role=order]').val(parseInt(index) + 1);
                 })
             }
         };
