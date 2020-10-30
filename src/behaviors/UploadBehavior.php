@@ -256,17 +256,16 @@ class UploadBehavior extends Behavior
             /* @var $model \yii\db\BaseActiveRecord */
             $file = [];
             foreach ($fields as $dataField => $modelAttribute) {
-                if (is_string($modelAttribute)) {
-                    $file[$dataField] = $model->hasAttribute($modelAttribute)
-                        ? ArrayHelper::getValue($model, $modelAttribute)
-                        : null;
-                }
                 if (is_array($modelAttribute)) {
                     foreach ($modelAttribute as $attribute) {
                         $file[$dataField][$attribute] = $model->hasAttribute($attribute)
                             ? ArrayHelper::getValue($model, $attribute)
                             : null;
                     }
+                } else {
+                    $file[$dataField] = $model->hasAttribute($modelAttribute)
+                        ? ArrayHelper::getValue($model, $modelAttribute)
+                        : null;
                 }
             }
             if ($file['path']) {
@@ -376,16 +375,15 @@ class UploadBehavior extends Behavior
     {
         $attributes = array_flip($model->attributes());
         foreach ($this->fields() as $dataField => $modelField) {
-            if (is_string($modelField)) {
-                if ($modelField && array_key_exists($modelField, $attributes)) {
-                    $model->{$modelField} = ArrayHelper::getValue($data, $dataField);
-                }
-            }
             if (is_array($modelField)) {
                 foreach ($modelField as $field) {
                     if ($field && array_key_exists($field, $attributes)) {
                         $model->{$field} = ArrayHelper::getValue($data, $field);
                     }
+                }
+            } else {
+                if ($modelField && array_key_exists($modelField, $attributes)) {
+                    $model->{$modelField} = ArrayHelper::getValue($data, $dataField);
                 }
             }
         }
