@@ -222,7 +222,7 @@
                 $container.find('.files .upload-kit-item').each(function (index, item) {
                     existingIndexes.push(index);
                 });
-                return existingIndexes.length ? (Math.max.apply(Math, existingIndexes)+1) : 1;
+                return existingIndexes.length ? (Math.max.apply(Math, existingIndexes)+1) : 0;
             },
             updateOrder: function () {
                 $files.find('.upload-kit-item').each(function(index, item){
