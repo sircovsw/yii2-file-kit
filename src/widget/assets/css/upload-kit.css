@@ -119,7 +119,8 @@
   max-width: 100%;
   max-height: 100%;
 }
-.upload-kit .upload-kit-item.not-image {
+.upload-kit .upload-kit-item.not-image,
+.upload-kit .upload-kit-item.image {
   background-image: url('../img/file.png');
   background-size: 75%;
   background-repeat: no-repeat;
@@ -127,7 +128,8 @@
   display: block;
   width: 150px;
 }
-.upload-kit .upload-kit-item.not-image .name {
+.upload-kit .upload-kit-item.not-image .name,
+.upload-kit .upload-kit-item.image .name {
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
