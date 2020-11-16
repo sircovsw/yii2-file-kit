@@ -188,15 +188,14 @@
 
                 item.append($('<span/>', {"class": "fas fa-times-circle remove", "data-url": file.delete_url}));
 
-                if ((!file.type || file.type.search(/image\/.*/g) !== -1) && options.previewImage) {
+                if ((!file.type || file.type.search(/image\/.*/g) !== -1) && options.previewFile) {
                     item.removeClass('not-image').addClass('image');
                     item.prepend($('<img/>', {src: file[options.baseUrlAttribute] + '/' +file[options.pathAttribute]}));
-                    item.find('span.type').text('');
                 } else {
                     item.removeClass('image').addClass('not-image');
                     item.css('backgroundImage', '');
-                    item.find('span.name').text(file.name);
                 }
+                item.find('span.name').text(file.name);
                 return item;
             },
             checkInputVisibility: function(){

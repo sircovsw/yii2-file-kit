@@ -88,7 +88,7 @@ class Upload extends InputWidget
     /**
      * @var bool preview image file or not in the upload box.
      */
-    public $previewImage = true;
+    public $previewFile = true;
     /**
      * custom hiddenInput id，if not set $this->options['id'] will be use.
      * useful if use name,value
@@ -152,7 +152,7 @@ class Upload extends InputWidget
                 'minFileSize' => $this->minFileSize,
                 'acceptFileTypes' => $this->acceptFileTypes,
                 'files' => $this->files,
-                'previewImage' => $this->previewImage,
+                'previewFile' => $this->previewFile,
                 'showPreviewFilename' => $this->showPreviewFilename,
                 'editFilename' => $this->editFilename,
                 'editFiledescription' => $this->editFiledescription,
