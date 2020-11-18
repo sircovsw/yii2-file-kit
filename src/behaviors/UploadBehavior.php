@@ -59,6 +59,10 @@ class UploadBehavior extends Behavior
      */
     public $nameAttribute;
     /**
+     * @var string
+     */
+    public $titleAttribute;
+    /**
      * @var array
      */
     public $descriptionsAttribute = [];
@@ -140,6 +144,7 @@ class UploadBehavior extends Behavior
             'type' => $this->typeAttribute,
             'size' => $this->sizeAttribute,
             'name' => $this->nameAttribute,
+            'title' => $this->titleAttribute,
             'order' => $this->orderAttribute
         ];
 

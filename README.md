@@ -249,6 +249,7 @@ For multiple files
             'typeAttribute' => 'type',
             'sizeAttribute' => 'size',
             'nameAttribute' => 'name',
+            'titleAttribute' => 'title',
             'descriptionsAttribute' => [
                 'description_ru',
                 'description_en'
