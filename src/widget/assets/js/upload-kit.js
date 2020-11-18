@@ -162,6 +162,7 @@
                 var item = $('<li>', {"class": "upload-kit-item done", value: index})
                     .append($('<input/>', {"name": name + '[' + options.pathAttributeName + ']', "value": file[options.pathAttribute], "type":"hidden"}))
                     .append($('<input/>', {"name": name + '[name]', "value": file.name, "type": (options.editFilename === true) ? "text" : "hidden"}))
+                    .append($('<input/>', {"name": name + '[title]', "value": file.title, "type":"hidden"}))
                     .append($('<input/>', {"name": name + '[size]', "value": file.size, "type":"hidden"}))
                     .append($('<input/>', {"name": name + '[type]', "value": file.type, "type":"hidden"}))
                     .append($('<input/>', {"name": name + '[order]', "value": file.order, "type":"hidden", "data-role": "order"}))
@@ -195,7 +196,7 @@
                     item.removeClass('image').addClass('not-image');
                     item.css('backgroundImage', '');
                 }
-                item.find('span.name').text(file.name);
+                item.find('span.name').text(file.title);
                 return item;
             },
             checkInputVisibility: function(){
